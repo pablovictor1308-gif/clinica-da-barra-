@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barra Clínica Odontológica | Urgência 24 h na Barra Olímpica</title>
+<meta name="description" content="Clínica odontológica de emergência com atendimento 24 hs na Barra Olímpica, Rio de Janeiro. Extrações, limpeza e profilaxia, clareamento e laserterapia. Fale pelo WhatsApp (21) 99122-9709.">
+<meta name="theme-color" content="#0B2A4A">
+<meta property="og:title" content="Barra Clínica Odontológica | Urgência 24 h">
+<meta property="og:description" content="Clínica odontológica de emergência com atendimento 24 hs na Barra Olímpica, Rio de Janeiro.">
+<meta property="og:image" content="img/foto-1.jpg">
+<link rel="icon" href="img/logo-google.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noite:#0B2A4A;
+  --noite-2:#103659;
+  --teal:#1787AE;
+  --teal-texto:#0E6C8E;
+  --lilas:#8C9BDB;
+  --nevoa:#F2F6FA;
+  --linha:#DCE5EE;
+  --branco:#fff;
+  --texto:#16324F;
+  --suave:#5B7088;
+  --laser:#E5354B;
+  --display:"Bricolage Grotesque", "Figtree", system-ui, sans-serif;
+  --corpo:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --raio-g:28px;
+  --raio-m:18px;
+  --pad:clamp(16px, 4vw, 48px);
+  --max:1280px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--branco);color:var(--texto);font-family:var(--corpo);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-family:var(--display);font-weight:500;letter-spacing:-.02em;line-height:1.05;color:var(--noite)}
+:focus-visible{outline:3px solid var(--lilas);outline-offset:3px;border-radius:6px}
+[id]{scroll-margin-top:96px}
+.envolve{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
+.pula{position:absolute;left:-999px;top:8px;background:var(--noite);color:#fff;padding:10px 16px;border-radius:999px;z-index:100}
+.pula:focus{left:16px}
+
+/* Botões */
+.botao{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:600;font-size:1rem;text-decoration:none;white-space:nowrap;transition:transform .2s ease, background-color .2s ease}
+.botao svg{width:20px;height:20px;flex:none}
+.botao:active{transform:scale(.98)}
+.botao-claro{background:var(--branco);color:var(--noite)}
+.botao-claro:hover{background:#E4EEF7}
+.botao-escuro{background:var(--noite);color:var(--branco)}
+.botao-escuro:hover{background:var(--teal-texto)}
+.botao-menor{min-height:44px;padding:0 20px;font-size:.95rem}
+.elo{font-weight:600;color:var(--teal-texto);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}
+.elo:hover{color:var(--noite)}
+
+/* Cabeçalho */
+.topo{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .2s}
+.topo.rolou{border-bottom-color:var(--linha)}
+.topo-linha{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.marca img{width:44px;height:44px;border-radius:12px;flex:none}
+.marca-nome{font-family:var(--display);font-weight:600;font-size:1.05rem;line-height:1.1;color:var(--noite);letter-spacing:-.01em}
+.marca-nome span{display:block;font-family:var(--corpo);font-weight:500;font-size:.8rem;color:var(--suave);letter-spacing:0}
+.menu{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.menu a{display:block;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:500;font-size:.95rem;color:var(--texto)}
+.menu a:hover{background:var(--nevoa)}
+
+/* Hero */
+.hero{padding-top:8px}
+.hero-moldura{position:relative;isolation:isolate;overflow:hidden;border-radius:var(--raio-g);background:var(--noite);color:#fff;min-height:min(760px, calc(100svh - 110px));display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(22px, 4vw, 56px)}
+.hero-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;z-index:-2;animation:aproxima 1.8s cubic-bezier(.2,.7,.2,1) both}
+.hero-moldura::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg, rgba(8,32,58,.94) 0%, rgba(8,32,58,.78) 42%, rgba(8,32,58,.25) 100%), linear-gradient(0deg, rgba(8,32,58,.85) 0%, rgba(8,32,58,0) 45%)}
+.estado{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:9px 16px 9px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);font-weight:500;font-size:.95rem;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.ponto{position:relative;width:10px;height:10px;border-radius:50%;background:var(--laser);flex:none}
+.ponto::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--laser);opacity:0;animation:pulso 2.2s ease-out infinite}
+.hero h1{color:#fff;font-size:clamp(2.5rem, 6.6vw, 5.6rem);max-width:13ch;margin-top:22px;text-wrap:balance}
+.hero-texto{max-width:54ch;margin-top:20px;font-size:clamp(1rem, 1.3vw, 1.15rem);color:rgba(255,255,255,.86)}
+.hero-acoes{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:30px}
+.hero-fone{color:#fff;font-weight:500;text-decoration:none;border-bottom:1.5px solid rgba(255,255,255,.4);padding-bottom:2px}
+.hero-fone:hover{border-bottom-color:#fff}
+.hero-base{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-top:clamp(32px, 6vw, 72px);padding-top:22px;border-top:1px solid rgba(255,255,255,.2)}
+.fichas{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0;max-width:620px}
+.fichas a{display:block;padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);color:#fff;text-decoration:none;font-size:.92rem;font-weight:500;transition:background-color .2s, color .2s}
+.fichas a:hover{background:#fff;color:var(--noite)}
+.nota{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff}
+.nota-num{font-family:var(--display);font-size:3.1rem;line-height:1;font-weight:500;letter-spacing:-.03em}
+.nota-info{font-size:.9rem;line-height:1.35;color:rgba(255,255,255,.82)}
+.estrelas{display:flex;gap:2px;color:#FFC94A}
+.estrelas svg{width:15px;height:15px}
+.hero-moldura > *{animation:sobe .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-moldura > .hero-foto{animation-name:aproxima;animation-duration:1.8s}
+.hero-moldura > h1{animation-delay:.08s}
+.hero-moldura > .hero-texto{animation-delay:.16s}
+.hero-moldura > .hero-acoes{animation-delay:.24s}
+.hero-moldura > .hero-base{animation-delay:.34s}
+@keyframes sobe{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes aproxima{from{opacity:0;transform:scale(1.06)}to{opacity:1;transform:none}}
+@keyframes pulso{0%{opacity:.8;transform:scale(.6)}100%{opacity:0;transform:scale(1.5)}}
+
+/* Blocos */
+.bloco{padding-block:clamp(72px, 10vw, 140px)}
+.bloco-nevoa{background:var(--nevoa)}
+.titulo{font-size:clamp(2rem, 4.2vw, 3.4rem);max-width:18ch;text-wrap:balance}
+.apoio{max-width:56ch;margin-top:18px;color:var(--suave);font-size:1.08rem}
+
+/* Sobre */
+.sobre-grade{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px, 6vw, 96px);align-items:start}
+.sobre-foto{border-radius:var(--raio-g);overflow:hidden;background:var(--nevoa);aspect-ratio:4/5}
+.sobre-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.manifesto{font-family:var(--display);font-weight:500;font-size:clamp(1.6rem, 3vw, 2.6rem);line-height:1.16;letter-spacing:-.02em;color:var(--noite)}
+.manifesto span{color:#8FA3B8}
+.numeros{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:20px;margin-top:clamp(40px, 6vw, 72px);padding-top:28px;border-top:1px solid var(--linha);list-style:none;padding-left:0}
+.numeros strong{display:block;font-family:var(--display);font-weight:500;font-size:clamp(2.2rem, 4.4vw, 3.6rem);line-height:1;letter-spacing:-.03em;color:var(--noite)}
+.numeros span{display:block;margin-top:10px;color:var(--suave);font-size:.95rem;line-height:1.35}
+.sobre-acao{margin-top:36px}
+
+/* Serviços */
+.serv-cabeca{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:clamp(32px, 5vw, 56px)}
+.serv-grade{display:grid;grid-template-columns:repeat(12, minmax(0,1fr));gap:16px}
+.urg{grid-column:span 12;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:end;background:var(--noite);color:#fff;border-radius:var(--raio-g);padding:clamp(26px, 4vw, 52px)}
+.urg h3{color:#fff;font-size:clamp(1.9rem, 3.6vw, 3rem)}
+.urg p{margin-top:16px;color:rgba(255,255,255,.82);max-width:48ch}
+.urg-lado{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+.urg-lado .estado{background:rgba(255,255,255,.08)}
+.foto-card{grid-column:span 6;position:relative;isolation:isolate;overflow:hidden;border-radius:var(--raio-g);min-height:480px;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(22px, 3vw, 36px);color:#fff;background:var(--noite-2)}
+.foto-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.foto-card:hover img{transform:scale(1.04)}
+.foto-card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg, rgba(8,32,58,.95) 0%, rgba(8,32,58,.6) 38%, rgba(8,32,58,0) 70%)}
+.foto-card h3{color:#fff;font-size:clamp(1.6rem, 2.6vw, 2.2rem)}
+.foto-card p{margin-top:10px;color:rgba(255,255,255,.86);max-width:42ch}
+.foto-card .elo-claro{margin-top:18px}
+.elo-claro{display:inline-block;align-self:flex-start;font-weight:600;color:#fff;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}
+.elo-claro:hover{color:#CFE6F2}
+.lista{grid-column:span 12;list-style:none;margin:16px 0 0;padding:0;border-top:1px solid var(--linha)}
+.lista li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) auto;gap:24px;align-items:center;padding:26px 0;border-bottom:1px solid var(--linha)}
+.lista h3{font-size:clamp(1.35rem, 2.2vw, 1.8rem)}
+.lista p{color:var(--suave)}
+
+/* Oferta */
+.oferta{position:relative;isolation:isolate;overflow:hidden;border-radius:var(--raio-g);background:var(--noite);color:#fff;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);min-height:460px}
+.oferta-texto{padding:clamp(28px, 5vw, 72px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.oferta h2{color:#fff;font-size:clamp(2rem, 4.2vw, 3.4rem);max-width:15ch}
+.oferta p{margin-top:18px;color:rgba(255,255,255,.84);max-width:46ch;font-size:1.08rem}
+.oferta ul{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.oferta li{padding:8px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.26);font-size:.92rem;font-weight:500}
+.oferta .botao{margin-top:32px}
+.oferta-foto{position:relative;min-height:280px}
+.oferta-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.oferta-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg, var(--noite) 0%, rgba(11,42,74,0) 40%)}
+
+/* Avaliações */
+.aval-cabeca{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:end;margin-bottom:clamp(32px, 5vw, 56px)}
+.aval-placar{display:flex;align-items:center;gap:18px;justify-self:end;text-decoration:none}
+.aval-placar strong{font-family:var(--display);font-weight:500;font-size:clamp(3.4rem, 6vw, 5rem);line-height:.9;letter-spacing:-.04em;color:var(--noite)}
+.aval-placar .estrelas svg{width:18px;height:18px}
+.aval-placar span{display:block;color:var(--suave);font-size:.95rem;margin-top:6px}
+.aval-placar .estrelas{display:flex;color:#F2B01E;margin-top:0}
+.aval-grade{display:grid;grid-template-columns:repeat(12, minmax(0,1fr));gap:16px}
+.aval{grid-column:span 4;display:flex;flex-direction:column;gap:20px;background:var(--branco);border-radius:var(--raio-m);padding:clamp(22px, 2.6vw, 32px);margin:0}
+.aval-maior{grid-column:span 8;background:var(--noite);color:#fff}
+.aval blockquote{margin:0;font-size:1.05rem;line-height:1.5;color:var(--texto)}
+.aval-maior blockquote{font-family:var(--display);font-size:clamp(1.3rem, 2.2vw, 1.85rem);line-height:1.25;letter-spacing:-.015em;color:#fff}
+.aval figcaption{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:600;color:var(--noite)}
+.aval-maior figcaption{color:#fff}
+.aval figcaption small{font-weight:400;font-size:.85rem;color:var(--suave)}
+.aval-maior figcaption small{color:rgba(255,255,255,.7)}
+.resposta{font-size:.92rem;color:var(--suave);border-left:2px solid var(--lilas);padding-left:14px}
+.aval-maior .resposta{color:rgba(255,255,255,.76)}
+.resposta b{display:block;font-weight:600;color:var(--teal-texto)}
+.aval-maior .resposta b{color:#BFD0FF}
+.frases{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:16px}
+.frases li{padding:20px 24px;border-radius:var(--raio-m);border:1px solid var(--linha);color:var(--texto);font-size:1rem}
+.aval-rodape{margin-top:32px}
+
+/* Local */
+.local-grade{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px, 5vw, 72px);align-items:stretch}
+.local-dados{display:flex;flex-direction:column;gap:32px}
+.dado h3{font-family:var(--corpo);font-weight:600;font-size:.95rem;letter-spacing:0;color:var(--suave);margin-bottom:8px}
+.dado address{font-style:normal;font-size:1.12rem;line-height:1.5;color:var(--noite)}
+.horas{width:100%;border-collapse:collapse;font-size:1.02rem}
+.horas th,.horas td{padding:9px 0;border-bottom:1px solid var(--linha);font-weight:400;text-align:left}
+.horas td{text-align:right;font-variant-numeric:tabular-nums}
+.horas tr.hoje th,.horas tr.hoje td{font-weight:600;color:var(--noite)}
+.horas tr.hoje th::after{content:"hoje";margin-left:10px;padding:2px 9px;border-radius:999px;background:var(--noite);color:#fff;font-size:.75rem;font-weight:600;vertical-align:2px}
+.obs{margin-top:12px;font-size:.95rem;color:var(--suave)}
+.acess{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.acess li{padding:7px 14px;border-radius:999px;background:var(--nevoa);font-size:.9rem;color:var(--texto)}
+.local-acoes{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.mapa{position:relative;border-radius:var(--raio-g);overflow:hidden;background:var(--nevoa);min-height:480px}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.local-mapa .predio{margin:16px 0 0;border-radius:var(--raio-m);overflow:hidden;position:relative}
+.predio img{width:100%;height:auto;aspect-ratio:21/8;object-fit:cover}
+.predio figcaption{position:absolute;left:16px;bottom:14px;padding:6px 14px;border-radius:999px;background:rgba(8,32,58,.78);color:#fff;font-size:.88rem}
+
+
+/* Chamada final */
+.final{text-align:center;padding-block:clamp(80px, 11vw, 150px)}
+.final h2{font-size:clamp(2.4rem, 6.4vw, 5.2rem);max-width:14ch;margin-inline:auto;text-wrap:balance}
+.final p{max-width:44ch;margin:22px auto 0;color:var(--suave);font-size:1.1rem}
+.final .botao{margin-top:34px}
+
+/* Rodapé */
+.rodape{background:var(--noite);color:rgba(255,255,255,.8);padding-block:56px 110px;font-size:.96rem}
+.rodape-grade{display:grid;grid-template-columns:minmax(0,5fr) repeat(3, minmax(0,3fr));gap:32px}
+.rodape .marca-nome{color:#fff}
+.rodape .marca-nome span{color:rgba(255,255,255,.65)}
+.rodape h3{font-family:var(--corpo);font-weight:600;font-size:.95rem;letter-spacing:0;color:#fff;margin-bottom:12px}
+.rodape ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.rodape a{text-decoration:none}
+.rodape a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.rodape-fim{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);font-size:.85rem;color:rgba(255,255,255,.6)}
+
+/* WhatsApp flutuante */
+.flutua{position:fixed;right:18px;bottom:18px;z-index:60;display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:0 22px 0 18px;border-radius:999px;background:#1FAF57;color:#fff;font-weight:600;text-decoration:none;box-shadow:0 10px 30px -8px rgba(11,42,74,.55)}
+.flutua:hover{background:#17964A}
+.flutua svg{width:24px;height:24px}
+
+/* Responsivo */
+@media (max-width: 980px){
+  .menu{display:none}
+  .sobre-grade,.urg,.oferta,.aval-cabeca,.local-grade{grid-template-columns:minmax(0,1fr)}
+  .sobre-foto{aspect-ratio:4/3;max-height:460px}
+  .sobre-foto img{object-position:50% 12%}
+  .foto-card{grid-column:span 12;min-height:420px}
+  .oferta-foto{order:-1;min-height:260px}
+  .oferta-foto::after{background:linear-gradient(0deg, var(--noite) 0%, rgba(11,42,74,0) 55%)}
+  .aval,.aval-maior{grid-column:span 12}
+  .aval-placar{justify-self:start}
+  .frases{grid-template-columns:minmax(0,1fr)}
+  .lista li{grid-template-columns:minmax(0,1fr);gap:8px;padding:22px 0}
+  .lista li .elo{margin-top:6px;justify-self:start}
+  .mapa{min-height:360px}
+  .rodape-grade{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .rodape-grade > :first-child{grid-column:1 / -1}
+}
+@media (max-width: 600px){
+  body{font-size:16px}
+  .topo-linha{height:66px}
+  .marca img{width:38px;height:38px}
+  .marca-nome{font-size:.98rem}
+  .topo .botao{min-height:42px;padding:0 16px;font-size:.9rem}
+  .topo .botao .so-desk{display:none}
+  .hero-moldura{border-radius:22px;min-height:min(720px, calc(100svh - 90px))}
+  .hero-moldura::before{background:linear-gradient(0deg, rgba(8,32,58,.96) 0%, rgba(8,32,58,.82) 55%, rgba(8,32,58,.45) 100%)}
+  .hero-acoes .botao{width:100%;justify-content:center}
+  .hero-base{flex-direction:column-reverse;align-items:flex-start}
+  .fichas{flex-wrap:nowrap;overflow-x:auto;max-width:none;width:calc(100% + 44px);margin-inline:-22px;padding-inline:22px;scrollbar-width:none}
+  .fichas::-webkit-scrollbar{display:none}
+  .fichas a{white-space:nowrap}
+  .numeros{grid-template-columns:minmax(0,1fr);gap:22px}
+  .numeros li{display:flex;align-items:baseline;gap:16px}
+  .numeros strong{min-width:3.2ch}
+  .numeros span{margin-top:0}
+  .oferta .botao,.final .botao,.urg .botao{width:100%;justify-content:center}
+  .rodape-grade{grid-template-columns:minmax(0,1fr)}
+  .flutua{right:12px;bottom:12px;padding:0 18px 0 16px}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+}
+</style>
+</head>
+<body>
+<a class="pula" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="topo" id="topo">
+  <div class="envolve topo-linha">
+    <a class="marca" href="#inicio" aria-label="Barra Clínica Odontológica, início">
+      <img src="img/logo-google.jpg" alt="" width="44" height="44">
+      <span class="marca-nome">Barra Clínica<span>Odontológica e urgência</span></span>
+    </a>
+    <nav aria-label="Principal">
+      <ul class="menu">
+        <li><a href="#sobre">A clínica</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#local">Como chegar</a></li>
+      </ul>
+    </nav>
+    <a class="botao botao-escuro botao-menor" data-wa="Olá! Gostaria de agendar uma consulta na Barra Clínica Odontológica." href="https://wa.me/5521991229709">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>
+      <span>Agendar<span class="so-desk"> consulta</span></span>
+    </a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <section class="hero envolve" id="inicio">
+    <div class="hero-moldura">
+      <img class="hero-foto" src="img/foto-1.jpg" alt="Dimension Office Park à noite, onde fica a Barra Clínica Odontológica" width="1170" height="645" fetchpriority="high">
+      <p class="estado" data-estado><span class="ponto" aria-hidden="true"></span><span data-estado-texto>Urgência 24 h pelo WhatsApp</span></p>
+      <h1>Dor de dente não tem hora. A gente também não.</h1>
+      <p class="hero-texto">Somos uma clínica odontológica de emergência com atendimento 24 hs na Barra Olímpica. Fazemos extrações dentárias, limpeza e profilaxia, clareamento, laserterapia e muito mais.</p>
+      <div class="hero-acoes">
+        <a class="botao botao-claro" data-wa="Olá! Preciso de um atendimento de urgência na Barra Clínica Odontológica." href="https://wa.me/5521991229709">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>
+          Chamar no WhatsApp
+        </a>
+        <a class="hero-fone" data-wa="Olá! Gostaria de agendar uma consulta na Barra Clínica Odontológica." href="https://wa.me/5521991229709">Agendar consulta: (21) 99122-9709</a>
+      </div>
+      <div class="hero-base">
+        <ul class="fichas" aria-label="Serviços">
+          <li><a href="#urgencia">Urgência 24 h</a></li>
+          <li><a href="#laserterapia">Laserterapia</a></li>
+          <li><a href="#sedacao">Sedação</a></li>
+          <li><a href="#trauma">Trauma</a></li>
+          <li><a href="#canal">Canal</a></li>
+          <li><a href="#extracoes">Extrações</a></li>
+          <li><a href="#limpeza">Limpeza e profilaxia</a></li>
+          <li><a href="#clareamento">Clareamento</a></li>
+        </ul>
+        <a class="nota" href="#avaliacoes" aria-label="Nota 4,9 de 5 em 398 avaliações no Google. Ver avaliações">
+          <span class="nota-num">4,9</span>
+          <span class="nota-info">
+            <span class="estrelas" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor"><use href="#estrela"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><use href="#estrela"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><use href="#estrela"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><use href="#estrela"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><use href="#estrela"/></svg></span>
+            398 avaliações<br>no Google
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco" id="sobre">
+    <div class="envolve sobre-grade">
+      <div class="sobre-foto">
+        <img src="img/foto-3.jpg" alt="Retrato publicado no perfil da Barra Clínica Odontológica" width="1066" height="1600" loading="lazy">
+      </div>
+      <div>
+        <h2 class="manifesto">Somos uma clínica odontológica de emergência com atendimento 24 hs. <span>Fazemos extrações dentárias, limpeza e profilaxia, clareamento e muito mais. Laserterapia para lesões bucais, estomatite, doença mão-pé-boca e herpes.</span></h2>
+        <ul class="numeros">
+          <li><strong>4,9</strong><span>nota média no Google, de 5</span></li>
+          <li><strong>398</strong><span>avaliações de pacientes</span></li>
+          <li><strong>7</strong><span>dias por semana de portas abertas</span></li>
+        </ul>
+        <div class="sobre-acao">
+          <a class="botao botao-escuro" data-wa="Olá! Gostaria de agendar uma consulta na Barra Clínica Odontológica." href="https://wa.me/5521991229709">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>
+            Agendar consulta
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco bloco-nevoa" id="servicos">
+    <div class="envolve">
+      <div class="serv-cabeca">
+        <div>
+          <h2 class="titulo">Do alívio da dor ao cuidado de rotina</h2>
+          <p class="apoio">Escolha o que você precisa. Cada serviço abre uma conversa no WhatsApp já com o assunto preenchido.</p>
+        </div>
+      </div>
+
+      <div class="serv-grade">
+        <article class="urg" id="urgencia">
+          <div>
+            <h3>Urgência odontológica 24 h</h3>
+            <p>Dor forte, dente quebrado, inchaço ou sangramento. Mande uma mensagem a qualquer hora e a equipe orienta o atendimento.</p>
+          </div>
+          <div class="urg-lado">
+            <p class="estado" data-estado><span class="ponto" aria-hidden="true"></span><span data-estado-texto>Urgência 24 h pelo WhatsApp</span></p>
+            <a class="botao botao-claro" data-wa="Olá! Estou com uma urgência odontológica e preciso de atendimento." href="https://wa.me/5521991229709">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>
+              Pedir atendimento de urgência
+            </a>
+          </div>
+        </article>
+
+        <article class="foto-card" id="laserterapia">
+          <img src="img/foto-2.jpg" alt="Aplicação de laser terapêutico na região do lábio de um paciente" width="1200" height="1600" loading="lazy">
+          <h3>Laserterapia</h3>
+          <p>Para lesões bucais, estomatite, doença mão-pé-boca, herpes e outras.</p>
+          <a class="elo-claro" data-wa="Olá! Gostaria de agendar uma sessão de laserterapia." href="https://wa.me/5521991229709">Agendar laserterapia</a>
+        </article>
+
+        <article class="foto-card" id="sedacao">
+          <img src="img/foto-4.jpg" alt="Criança no colo do pai durante atendimento com sedação na clínica" width="1600" height="1200" loading="lazy">
+          <h3>Sedação</h3>
+          <p>Atendimento com sedação, para adultos e crianças. Pergunte pelo WhatsApp se é indicada para o seu caso.</p>
+          <a class="elo-claro" data-wa="Olá! Gostaria de saber mais sobre o atendimento com sedação." href="https://wa.me/5521991229709">Perguntar sobre sedação</a>
+        </article>
+
+        <ul class="lista">
+          <li id="trauma">
+            <h3>Trauma dentário</h3>
+            <p>Quedas, batidas e dentes fraturados ou deslocados.</p>
+            <a class="elo" data-wa="Olá! Preciso de atendimento para um trauma dentário." href="https://wa.me/5521991229709">Falar sobre trauma</a>
+          </li>
+          <li id="canal">
+            <h3>Tratamento de canal</h3>
+            <p>Abertura e tratamento de canal, inclusive em casos de dor aguda.</p>
+            <a class="elo" data-wa="Olá! Gostaria de agendar uma avaliação para tratamento de canal." href="https://wa.me/5521991229709">Agendar avaliação de canal</a>
+          </li>
+          <li id="extracoes">
+            <h3>Extrações dentárias</h3>
+            <p>Extração de dentes com avaliação prévia do caso.</p>
+            <a class="elo" data-wa="Olá! Gostaria de agendar uma avaliação para extração dentária." href="https://wa.me/5521991229709">Agendar extração</a>
+          </li>
+          <li id="limpeza">
+            <h3>Limpeza e profilaxia</h3>
+            <p>Limpeza profissional para manter dentes e gengiva saudáveis.</p>
+            <a class="elo" data-wa="Olá! Gostaria de agendar uma limpeza e profilaxia." href="https://wa.me/5521991229709">Agendar limpeza</a>
+          </li>
+          <li id="clareamento">
+            <h3>Clareamento</h3>
+            <p>Clareamento dental com acompanhamento da equipe.</p>
+            <a class="elo" data-wa="Olá! Gostaria de agendar um clareamento dental." href="https://wa.me/5521991229709">Agendar clareamento</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco" id="sessao-pontual">
+    <div class="envolve">
+      <div class="oferta">
+        <div class="oferta-texto">
+          <h2>Sessão pontual: resolva uma coisa só, hoje</h2>
+          <p>Não precisa começar um tratamento longo para ser atendido. Marque uma única sessão para o que está incomodando agora e decida os próximos passos depois.</p>
+          <ul>
+            <li>Alívio de dor</li>
+            <li>Sessão de laserterapia</li>
+            <li>Limpeza e profilaxia</li>
+            <li>Avaliação</li>
+          </ul>
+          <a class="botao botao-claro" data-wa="Olá! Gostaria de agendar uma sessão pontual na Barra Clínica Odontológica." href="https://wa.me/5521991229709">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>
+            Agendar sessão pontual
+          </a>
+        </div>
+        <div class="oferta-foto">
+          <img src="img/foto-2.jpg" alt="" width="1200" height="1600" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco bloco-nevoa" id="avaliacoes">
+    <div class="envolve">
+      <div class="aval-cabeca">
+        <div>
+          <h2 class="titulo">Quem chegou com dor conta como saiu</h2>
+          <p class="apoio">Avaliações reais publicadas no Google, com a resposta da clínica.</p>
+        </div>
+        <a class="aval-placar" href="https://search.google.com/local/reviews?placeid=ChIJZTsLd5DbmwARGSJVwberRrE" target="_blank" rel="noopener" aria-label="Nota 4,9 em 398 avaliações. Abrir avaliações no Google">
+          <strong>4,9</strong>
+          <span>
+            <span class="estrelas" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor"><use href="#estrela"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><use href="#estrela"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><use href="#estrela"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><use href="#estrela"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><use href="#estrela"/></svg></span>
+            <span>398 avaliações no Google</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="aval-grade">
+        <figure class="aval aval-maior">
+          <blockquote>“Atendimento impecável! Cheguei no sábado com uma dor forte e a Dra. Vânja identificou logo uma pulpite. Ela me ofereceu para iniciar o canal no mesmo dia, mas optei por tentar a medicação primeiro. Como não aguentei a dor no fim de semana, voltei hoje, segunda-feira. A Dra. Luiza me atendeu e fez a abertura do canal de forma espetacular. O alívio foi imediato! Profissionais incríveis, recomendo demais!”</blockquote>
+          <p class="resposta"><b>Resposta da clínica</b>Obrigada querida. Ficamos feliz em saber que você está melhor. Um abraço</p>
+          <figcaption>Laura Carvalho <small>Local Guide no Google</small></figcaption>
+        </figure>
+
+        <figure class="aval">
+          <blockquote>“PERFEITO! Doutor Paulo é extremamente atencioso e profissional, cheguei morrendo de dor para uma consulta de emergência e saí outra pessoa! Além de super simpático ele é muito bom no que faz. Super indico!”</blockquote>
+          <p class="resposta"><b>Resposta da clínica</b>Obrigado Mariana. Que bom que você está bem. Um abraço. Dr Paulo</p>
+          <figcaption>Mariana Lima <small>Google</small></figcaption>
+        </figure>
+
+        <figure class="aval">
+          <blockquote>“Atendimento nota mil! O lugar muito limpinho e bem cuidado e a Dra além de uma excelente profissional (salvou a minha vida) kkkkk estava morrendo de dor. Ela é um ser humano incrível. Só agradecimento pelo atendimento, carinho e cuidado.”</blockquote>
+          <figcaption>Monique Aguiar <small>Google</small></figcaption>
+        </figure>
+
+        <figure class="aval">
+          <blockquote>“Atendimento excelente! Fui atendida bem rápido e a doutora me explicou direitinho como prosseguir, deu bastante atenção e fez um paliativo que ajudou na minha dor. Recomendo muito.”</blockquote>
+          <figcaption>Stephanie Horan <small>Google</small></figcaption>
+        </figure>
+
+        <figure class="aval">
+          <blockquote>“Ótimo atendimento. Dra. Vanja ótima profissional e excelente pessoa. Gostei muito e planejo voltar caso precise pra outras coisas. Feliz com o bom atendimento e profissionalismo que recebi.”</blockquote>
+          <figcaption>Elisa Rosa <small>Google</small></figcaption>
+        </figure>
+      </div>
+
+      <ul class="frases" aria-label="Trechos de outras avaliações no Google">
+        <li>“Profissionais e materiais de primeira linha!”</li>
+        <li>“Paulo excelente e com uma educação ímpar… profissional acima de tudo.”</li>
+        <li>“Feliz com o bom atendimento e profissionalismo que recebi.”</li>
+      </ul>
+
+      <p class="aval-rodape"><a class="elo" href="https://search.google.com/local/reviews?placeid=ChIJZTsLd5DbmwARGSJVwberRrE" target="_blank" rel="noopener">Ler as 398 avaliações no Google</a></p>
+    </div>
+  </section>
+
+  <section class="bloco" id="local">
+    <div class="envolve">
+      <div class="serv-cabeca">
+        <h2 class="titulo">No Dimension Office Park, ao lado da Perinatal</h2>
+      </div>
+      <div class="local-grade">
+        <div class="local-dados">
+          <div class="dado">
+            <h3>Endereço</h3>
+            <address>Avenida Embaixador Abelardo Bueno, nº 1<br>Dimension Office Park, bloco Lagoa 1, sala 211<br>Barra Olímpica, Rio de Janeiro, RJ<br>CEP 22775-040</address>
+          </div>
+          <div class="dado">
+            <h3>Horário da clínica</h3>
+            <table class="horas">
+              <tbody>
+                <tr data-dia="1"><th scope="row">Segunda-feira</th><td>09:00 às 20:00</td></tr>
+                <tr data-dia="2"><th scope="row">Terça-feira</th><td>09:00 às 20:00</td></tr>
+                <tr data-dia="3"><th scope="row">Quarta-feira</th><td>09:00 às 20:00</td></tr>
+                <tr data-dia="4"><th scope="row">Quinta-feira</th><td>09:00 às 20:00</td></tr>
+                <tr data-dia="5"><th scope="row">Sexta-feira</th><td>09:00 às 20:00</td></tr>
+                <tr data-dia="6"><th scope="row">Sábado</th><td>09:00 às 20:00</td></tr>
+                <tr data-dia="0"><th scope="row">Domingo</th><td>10:00 às 20:00</td></tr>
+              </tbody>
+            </table>
+            <p class="obs">Fora desse horário, a urgência 24 h atende pelo WhatsApp.</p>
+          </div>
+          <div class="dado">
+            <h3>Acessibilidade</h3>
+            <ul class="acess">
+              <li>Entrada acessível</li>
+              <li>Banheiro acessível</li>
+              <li>Estacionamento acessível</li>
+              <li>Assento acessível</li>
+            </ul>
+          </div>
+          <div class="local-acoes">
+            <a class="botao botao-escuro" data-wa="Olá! Gostaria de agendar uma consulta e receber a localização da clínica." href="https://wa.me/5521991229709">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>
+              Agendar e receber a localização
+            </a>
+            <a class="elo" href="https://www.google.com/maps/search/?api=1&query=Barra+Cl%C3%ADnica+Odontol%C3%B3gica+Urg%C3%AAncia&query_place_id=ChIJZTsLd5DbmwARGSJVwberRrE" target="_blank" rel="noopener">Abrir no Google Maps</a>
+          </div>
+        </div>
+        <div class="local-mapa">
+          <div class="mapa">
+            <iframe title="Mapa: Barra Clínica Odontológica Urgência" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=-22.9736961,-43.3685598&z=16&hl=pt-BR&output=embed"></iframe>
+          </div>
+          <figure class="predio">
+            <img src="img/foto-1.jpg" alt="Fachada do Dimension Office Park" width="1170" height="645" loading="lazy">
+            <figcaption>Dimension Office Park</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final bloco-nevoa">
+    <div class="envolve">
+      <h2>Está com dor agora? Fale com a gente.</h2>
+      <p>Mande uma mensagem contando o que está sentindo. Convênio ou particular, a equipe responde e orienta o atendimento.</p>
+      <a class="botao botao-escuro" data-wa="Olá! Gostaria de agendar uma consulta na Barra Clínica Odontológica." href="https://wa.me/5521991229709">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>
+        Chamar no WhatsApp (21) 99122-9709
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="envolve">
+    <div class="rodape-grade">
+      <div>
+        <a class="marca" href="#inicio">
+          <img src="img/logo-google.jpg" alt="" width="44" height="44">
+          <span class="marca-nome">Barra Clínica<span>Odontológica e urgência</span></span>
+        </a>
+      </div>
+      <div>
+        <h3>Serviços</h3>
+        <ul>
+          <li><a href="#urgencia">Urgência 24 h</a></li>
+          <li><a href="#laserterapia">Laserterapia</a></li>
+          <li><a href="#sedacao">Sedação</a></li>
+          <li><a href="#trauma">Trauma dentário</a></li>
+          <li><a href="#canal">Tratamento de canal</a></li>
+          <li><a href="#extracoes">Extrações</a></li>
+          <li><a href="#limpeza">Limpeza e profilaxia</a></li>
+          <li><a href="#clareamento">Clareamento</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <ul>
+          <li><a data-wa="Olá! Gostaria de agendar uma consulta na Barra Clínica Odontológica." href="https://wa.me/5521991229709">WhatsApp (21) 99122-9709</a></li>
+          <li><a href="https://www.instagram.com/barraclinica/" target="_blank" rel="noopener">Instagram @barraclinica</a></li>
+          <li><a href="#sessao-pontual">Sessão pontual</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Endereço</h3>
+        <p>Av. Embaixador Abelardo Bueno, nº 1<br>Dimension Office Park, bloco Lagoa 1, sala 211<br>Barra Olímpica, Rio de Janeiro, RJ</p>
+      </div>
+    </div>
+    <p class="rodape-fim">Barra Clínica Odontológica Urgência. Nota e avaliações conforme o perfil da clínica no Google.</p>
+  </div>
+</footer>
+
+<a class="flutua" data-wa="Olá! Gostaria de agendar uma consulta na Barra Clínica Odontológica." href="https://wa.me/5521991229709" aria-label="Chamar a clínica no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>
+  WhatsApp
+</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.23 8.24c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06a6.73 6.73 0 0 1-1.99-1.23 7.4 7.4 0 0 1-1.38-1.71c-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.3Z"/></symbol>
+  <symbol id="estrela" viewBox="0 0 20 20"><path d="m10 1.6 2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8L10 1.6Z"/></symbol>
+</svg>
+
+<script>
+(function(){
+  // Todos os CTAs de WhatsApp recebem a mensagem do próprio contexto
+  var numero = '5521991229709';
+  document.querySelectorAll('[data-wa]').forEach(function(a){
+    a.href = 'https://wa.me/' + numero + '?text=' + encodeURIComponent(a.getAttribute('data-wa'));
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
+
+  // Estado ao vivo, pelo horário da clínica no fuso do Rio
+  var horas = {0:[10,20],1:[9,20],2:[9,20],3:[9,20],4:[9,20],5:[9,20],6:[9,20]};
+  function agoraNoRio(){
+    try{
+      var p = new Intl.DateTimeFormat('en-US',{timeZone:'America/Sao_Paulo',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+      var m = {}; p.forEach(function(x){ m[x.type] = x.value; });
+      var dias = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+      return {dia:dias[m.weekday], hora:(parseInt(m.hour,10)%24) + parseInt(m.minute,10)/60};
+    }catch(e){ var d = new Date(); return {dia:d.getDay(), hora:d.getHours() + d.getMinutes()/60}; }
+  }
+  function atualiza(){
+    var n = agoraNoRio(), h = horas[n.dia];
+    var aberto = n.hora >= h[0] && n.hora < h[1];
+    var texto = aberto ? 'Aberto agora, até as ' + h[1] + 'h' : 'Urgência 24 h pelo WhatsApp';
+    document.querySelectorAll('[data-estado-texto]').forEach(function(el){ el.textContent = texto; });
+    document.querySelectorAll('.horas tr').forEach(function(tr){ tr.classList.toggle('hoje', Number(tr.getAttribute('data-dia')) === n.dia); });
+  }
+  atualiza();
+  setInterval(atualiza, 60000);
+
+  var topo = document.getElementById('topo');
+  function rola(){ topo.classList.toggle('rolou', window.scrollY > 8); }
+  rola();
+  window.addEventListener('scroll', rola, {passive:true});
+})();
+</script>
+</body>
+</html>
